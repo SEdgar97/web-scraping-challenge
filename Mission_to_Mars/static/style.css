@@ -2,9 +2,13 @@ body{
     background-color: white; 
     color: black;
   }
+.jumbotron{
+  background-color: lightblue;
+}
 h1{
     background-color: grey;
     font-size: xx-large;
-    color: black
+    color: black;
+    margin: 0 auto; 
 }
 
