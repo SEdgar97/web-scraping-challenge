@@ -88,10 +88,13 @@ def scrape():
 
     mars_data = {
         "news_title": news_title,
-        "news_paragraph": news_paragraph,
+        "news_p": news_p,
         "featured_image_url": featured_image_url,
         "mars_table": mars_table,
         "hemisphere_imgs_urls": hemisphere_imgs_urls
     }
 
     return mars_data
+
+if __name__ == "__main__":
+    print(scrape())

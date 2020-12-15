@@ -15,7 +15,7 @@
 <body>
     <div class="container text-center">
         <div class="row">
-            <div class="col col-lg-8" divbdy>
+            <div class="col col-lg-8">
                 <h1 class="jumbotron"><strong>Mission to Mars</strong></h1>
                 <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
             </div>
@@ -26,8 +26,8 @@
             <div class="media">
                 <div class="media-body">
                     <h2 style="font-size: large;">Latest Mars News</h2>
-                    <h3 style="font-size: large;">{{mission_to_mars.news_title}}</h3>
-                    <p>{{mission_to_mars.news_p}}</p>
+                    <h3 style="font-size: large;">{{mars.news_title}}</h3>
+                    <p>{{mars.news_p}}</p>
                 </div>
             </div>
         </div>
@@ -42,22 +42,17 @@
     <div class="col-lg-4 col-md-4" style="padding-top: 60px;">
         <div class="card-body" style="width: 100%">
             <h5 style="font-weight: bold" class="card-title">Mars Facts</h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-                {{data class="mars_table" | safe }}
-            </h6>
+            <table>{{<mars_data class="mars_facts"></mars_data>| safe}} </table>
         </div>
     </div>
     <div class="row" id="mars-hemispheres" style="margin-top:80px;">
         <div class="page-header">
             <h2 class="text-center">Mars Hemispheres</h2>
         </div>
-        {% for hemisphere in mars.hemisphere_imgs_urls %}
+        {% for hemisphere in mars_data.hemisphere_imgs_urls %}
         <div class="col-md-6">
             <div class="thumbnail">
                 <img src="{{hemisphere_imgs_urls.img_url}}" alt="...">
-                <div class="caption">
-                    <h3>{{hemisphere_imgs_urls.title}}</h3>
-                </div>
             </div>
         </div>
         {% endfor %}
