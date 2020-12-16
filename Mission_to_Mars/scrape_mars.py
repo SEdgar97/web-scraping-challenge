@@ -18,7 +18,7 @@ def scrape():
     news_soup = bs(html, 'html.parser')
 
     news_title = news_soup.find_all('div', class_='content_title')[0].text
-    news_paragraph = news_soup.find_all('div', class_='article_teaser_body')[0].text
+    news_p = news_soup.find_all('div', class_='article_teaser_body')[0].text
 
 
     # JPL Mars

@@ -26,8 +26,8 @@
             <div class="media">
                 <div class="media-body">
                     <h2 style="font-size: large;">Latest Mars News</h2>
-                    <h3 style="font-size: large;">{{mars.news_title}}</h3>
-                    <p>{{mars.news_p}}</p>
+                    <h3 style="font-size: large;">{{mars_db.news_title}}</h3>
+                    <p>{{mars_db.news_p}}</p>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
     <div class="col-lg-4 col-md-4" style="padding-top: 60px;">
         <div class="card-body" style="width: 100%">
             <h5 style="font-weight: bold" class="card-title">Mars Facts</h5>
-            <table>{{<mars_data class="mars_facts"></mars_data>| safe}} </table>
+            <table>{{mars_data | safe}} </table>
         </div>
     </div>
     <div class="row" id="mars-hemispheres" style="margin-top:80px;">
